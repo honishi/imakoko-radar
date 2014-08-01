@@ -1,0 +1,12 @@
+# based on https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
+
+## Directory-based project format
+.idea/
+
+## File-based project format
+*.ipr
+*.iml
+*.iws
+
+## Additional for IntelliJ
+out/
