@@ -8,7 +8,7 @@ import radar
 from twython import Twython
 
 
-CHECK_INTERVAL = 60
+CHECK_INTERVAL = 15
 RESTART_INTERVAL = 60
 CONFIG_FILE = os.path.dirname(os.path.realpath(__file__)) + "/main.configuration"
 
