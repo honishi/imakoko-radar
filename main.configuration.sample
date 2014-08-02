@@ -1,0 +1,50 @@
+[imakoko]
+target_users = aaa,bbb
+
+[aaa]
+message = [イマココ] aaaが活動開始したようです
+imakoko_url = http://proxy.imacoconow.com/gpslive/aaa
+# @aaa
+consumer_key = xxx
+consumer_secret = xxx
+access_key = xxx
+access_secret = xxx
+
+[bbb]
+message = [イマココ] bbbが活動開始したようです
+imakoko_url = http://proxy.imacoconow.com/gpslive/bbb
+# @bbb
+consumer_key = xxx
+consumer_secret = xxx
+access_key = xxx
+access_secret = xxx
+
+[loggers]
+keys=root
+
+[logger_root]
+level=NOTSET
+handlers=root
+# handlers=stdout
+
+[handlers]
+keys=root,stdout
+
+[handler_root]
+class=handlers.RotatingFileHandler
+level=NOTSET
+formatter=default
+args=(os.getcwd() + "/log/imakoko-radar.log", 'a', (100*1024*1024), 9)
+
+[handler_stdout]
+class=StreamHandler
+level=NOTSET
+formatter=default
+args=(sys.stdout,)
+
+[formatters]
+keys=default
+
+[formatter_default]
+format=[%(asctime)s] [%(levelname)s] [%(threadName)s] %(message)s
+datefmt=
