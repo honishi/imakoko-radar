@@ -4,7 +4,6 @@ import logging.config
 import configparser
 import time
 
-
 import radar
 from twython import Twython
 
