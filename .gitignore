@@ -15,6 +15,9 @@ out/
 *.pyc
 
 ## application
+log/
 main.configuration*
 !main.configuration.sample
-*.log
+radar.env*
+!radar.env.sample
+

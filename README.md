@@ -12,10 +12,18 @@ pyenv local imakoko-radar-3.3.3
 pip install -r requirements.txt
 ````
 
-kick
+start & stop
 --
 ````
-python ./main.py
+./radar.sh start
+./radar.sh stop
+````
+
+monitoring example using cron
+--
+see `radar.sh` inside for details of monitoring.
+````
+* * * * * /path/to/imakoko-radar/radar.sh monitor >> /path/to/imakoko-radar/log/monitor.log 2>&1
 ````
 
 license
